@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sigaa",
+  "description": "Acessar sigaa via chrome",
+  "version": "1.0",
+   "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+
+  "browser_action": {
+    ////"default_icon": "icon.png",
+    //"default_popup": "popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":[
+        "https://si3.ufc.br/sigaa/verTelaLogin.do",
+        "https://si3.ufc.br/sigaa/logar.do?dispatch=logOn",
+        "https://si3.ufc.br/sigaa/logar.do?dispatch=logOff"
+      ],
+      "js":[
+        "js/jquery.min.js",
+        "js/chrome.js"
+        
+
+      ],
+
+      "run_at":"document_end",
+
+      "persistent":false
+    }
+  ]
+ 
+}
