@@ -4,10 +4,8 @@
 			// body...
 					
 					$('div').find('input, button').prop('disabled', false);
-			
-			
-		});
-	
-		
+
+
+        });
 
 
